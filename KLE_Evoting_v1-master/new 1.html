@@ -1,0 +1,33 @@
+<html>
+ 
+
+<form>
+<div>
+<label>Fruit:</label>
+    <select name="Fruit" onchange="java_script_:show(this.options[this.selectedIndex].value)">
+        <option value='pear'>SPORT</option>
+        <option value='cultural'>CULTURAL</option>
+        <option value='grapes'>TECHNICAL</option>
+    </select>
+</div>
+<div id="hiddenDiv1">
+    <img src="images/sport.jpg" alt="sport" width="90" height="90">
+    <input type="checkbox" value="vote"> vote</input>
+</div>
+</div>
+
+</form>
+<SCRIPT> 	
+	function show(select_item) {
+	    if (select_item == "cultural") {
+		    hiddenDiv1.style.visibility='visible';
+			hiddenDiv1.style.display='block';
+			Form.fileURL.focus();
+		} 
+		else{
+			hiddenDiv1.style.visibility='hidden';
+			hiddenDiv1.style.display='none';
+		}
+	}	
+</SCRIPT> 
+</html>

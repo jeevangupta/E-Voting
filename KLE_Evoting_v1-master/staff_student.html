@@ -1,0 +1,122 @@
+<html>
+<head>
+<style>
+.imgcontainer {
+    text-align: left;
+    margin: 24px 0 12px 0;
+}
+img.imgStyle1 {
+    
+   position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+   
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container {
+    position:relative
+    padding: 50px;
+    margin-top: 50px;
+  
+  
+}
+
+form {
+    border: 1px solid #f1f1f1;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+input[type=text], input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+body {
+        background-image: url("https://klecse.files.wordpress.com/2013/01/cropped-image006634363601242310000.jpg ");
+		background-repeat: no-repeat;
+		background-size:cover;
+		
+}
+</style>
+<script type="text/javascript">
+window.onload= function("myform"){
+document.getElementById("cultural").style.display='none'
+}
+
+function oncategoryselected("myform"){
+  alert("test");
+  var str=document.getElementById("category").value;
+  
+if(str=="sport")
+{
+   document.getElementById("cultural").style.display='none';
+   document.getElementById("sport").style.display='';
+}
+else{
+
+   document.getElementById("sport").style.display='none';
+   document.getElementById("cultural").style.display='';
+}
+}
+</script>
+</head>
+
+<body>
+<h2> Candidates<h2>
+
+<div id="imageContainer">
+ 
+ <img src="images/klelogo.jpg" alt="klelogo" width="90" height="90" class="imgStyle1">
+ 
+ <div style="position: absolute; top: 100; right: 40; width: 100px; text-align:right;">
+  KLE 
+  </div>
+</div>
+
+</body>
+<div>
+		 <form name="myform" action="">
+			<div class="container">
+			  <label><b>Category</b></label>
+			  
+			  <select name="category" id="category" onchange="oncategoryselected(this.form)">
+				<option value="sport">Sport</option>
+				<option value="cultural">Cultural</option>
+				<option value="technical">Technical</option>	
+			  </select>
+		
+		     <div id="sport">
+			     <img src="images/sport.jpg" alt="sport" width="90" height="90">
+				 <input type="checkbox"  value="vote">Vote <br>	 
+		     </div>
+			 
+			 <div id="cultural">
+			     <img src="images/sport.jpg" alt="sport" width="90" height="90">
+				 <input type="checkbox"  value="vote">Vote <br>	 
+		     </div>
+			 
+			  <button type="submit">Cancel</button>
+					
+			  <button type="submit">Submit</button>	
+			</div>
+		</form>
+</div>	
+		 
+</html>			
